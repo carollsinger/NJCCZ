@@ -107,28 +107,30 @@ git pull origin main
 ```
 
 ### git checkout
-Switches between branches or restores files to a previous state.
+Switches between branches or restores files to a previous state. Branches are kind of blocks in a repository where we write new features, fix bugs etc. For example, if three developers are working on a project, they can create their own branches and work on them as the branches are isolated, so everyone can work in their branch.
 
-To switch to an existing branch:
+To switch to an **existing** branch:
 
 ```bash
 git checkout branch-name
 ```
-To create a new branch and switch to it:
+To create a **new branch and switch** to it:
 
 ```bash
 git checkout -b new-branch
 ```
 
+### 
+
 ## Example Workflow
 Here's a simple example to show how these commands work together:
 
-### 1. Clone the Repository
+### 1. Clone this Repository
 ```bash
-git clone https://github.com/username/repository.git
+git clone https://github.com/beertino/NJCCZ
 ```
 
-### 2. Create a New Branch
+### 2. Create a New Branch called `my-feature`
 ```bash
 git checkout -b my-feature
 ```
@@ -146,9 +148,25 @@ git add .
 git commit -m "Add new feature"
 ```
 
-### 6. Push Your Branch to GitHub
+### 6A. Realised Your Branch is Garbo Tier and Wants to Delete it
+Switch to another branch (e.g. `main`) before deleting a branch, as Git does not allow you to delete the branch you are currently on.
+
+```bash
+git checkout main
+git branch -D garbo_branch
+```
+
+### 6B. Push Your Branch to GitHub / Merge
 ```bash
 git push origin my-feature
+```
+
+or 
+
+```bash
+git checkout main
+git merge my-feature
+git push
 ```
 
 ### 7. Create a Pull Request on GitHub
