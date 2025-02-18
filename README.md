@@ -1,4 +1,4 @@
-# Git Basics for High School Students
+# Git Basics for NJCCZ
 
 Welcome to **Git Basics for High School Students**! This repository is designed to introduce you to version control using Git. Whether you're completely new to Git or just need a refresher, this guide will help you learn how to use basic Git commands like **push**, **pull**, **commit**, and **checkout**.
 
