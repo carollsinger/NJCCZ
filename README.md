@@ -27,7 +27,7 @@ After logging in to your Github account,
     - Click on `Create Codespace`
 
     <center>
-    <img src="codespace_1.gif" alt="" width="500" height="600">
+    <img src="./src/codespace_1.gif" alt="" width="500" height="600">
     </center>
 
 ## Creating a Branch
@@ -35,7 +35,7 @@ After logging in to your Github account,
 2. Enter a name for your branch which is a new/separate version of the main repository. Ideally, the name is short and describe the main functionality of your branch
 
 <center>
-<img src="codespace_2.gif" alt="" width="500" height="600">
+<img src="./src/codespace_2.gif" alt="" width="500" height="600">
 </center>
 
 ## Making Changes In a Branch
@@ -45,7 +45,7 @@ Now that you are in a branch, you can make changes to your copy of the repositor
 3. Name the text file with your name and write down a hobby in the file.
 
 <center>
-<img src="codespace_3.gif" alt="" width="500" height="600">
+<img src="./src/codespace_3.gif" alt="" width="500" height="600">
 </center>
 
 ## Commiting Changes
@@ -61,7 +61,7 @@ Now that you are in a branch, you can make changes to your copy of the repositor
 In Git, "publishing a branch" means to send a local branch you created on your computer to a remote repository like GitHub, making it accessible to other team members so they can see, collaborate on, and review your work; essentially, it's the act of sharing your branch with others on the project. 
 
 <center>
-<img src="codespace_4.gif" alt="" width="500" height="600">
+<img src="./src/codespace_4.gif" alt="" width="500" height="600">
 </center>
 
 ## Doing a Pull Request
@@ -74,7 +74,7 @@ In Git, "publishing a branch" means to send a local branch you created on your c
 A pull request is a proposal to merge a set of changes from one branch into another. In a pull request, collaborators can review and discuss the proposed set of changes before they integrate the changes into the main codebase.
 
 <center>
-<img src="codespace_4.gif" alt="" width="500" height="600">
+<img src="./src/codespace_4.gif" alt="" width="500" height="600">
 </center>
 
 
