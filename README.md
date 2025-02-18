@@ -1,194 +1,86 @@
-# Git Basics for NJCCZ
+# Codespaces Basics for NJCCZ Students
 
-Welcome to **Git Basics for High School Students**! This repository is designed to introduce you to version control using Git. Whether you're completely new to Git or just need a refresher, this guide will help you learn how to use basic Git commands like **push**, **pull**, **commit**, and **checkout**.
+Welcome to **NJC Basics for NJCCZ Students**! This repository is designed to introduce you to use Github's Codespaces to share and store your files in repos and do some version control using Git. 
 
 ---
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [What is Git?](#what-is-git)
-- [Getting Started](#getting-started)
-- [Basic Git Commands](#basic-git-commands)
-  - [git init](#git-init)
-  - [git clone](#git-clone)
-  - [git add](#git-add)
-  - [git commit](#git-commit)
-  - [git push](#git-push)
-  - [git pull](#git-pull)
-  - [git checkout](#git-checkout)
-- [Example Workflow](#example-workflow)
-- [Troubleshooting](#troubleshooting)
+- [Creating a Codespace on the Repo](#creating-a-codespace-on-the-repo)
+- [Creating a Branch](#creating-a-branch)
+- [Making Changes In a Branch](#making-changes-in-a-branch)
+- [Commiting Changes](#commiting-changes)
+- [Doing a Pull Request](#doing-a-pull-request)
 - [Additional Resources](#additional-resources)
 - [Contributing](#contributing)
 - [License](#license)
 
 ---
 
-## Introduction
+## Creating a Codespace on the Repo
+After logging in to your Github account, 
+1. navigate to your [Github Codespaces](https://github.com/codespaces)
+2. on the top right hand corner, click on `New codespace`
+3. In the `Create new codespace` page, 
+    - Under repository, look for `beertino/NJCCZ` and select it
+    - you can leave the rest of the options to default
+    - Click on `Create Codespace`
 
-Version control is a fundamental skill for anyone working on computer projects, and **Git** is one of the most popular version control systems out there. This guide is meant for high school students and beginners, breaking down the basic Git commands and workflows to help you manage your projects and collaborate with others.
+    <center>
+    <img src="codespace_1.gif" alt="" width="500" height="600">
+    </center>
 
----
+## Creating a Branch
+1. On the left hand navigation panel, click on the source control icon (icon below the magnifying glass icon). In the source control pane (the bottom left panel), right click on the latest commit and choose `Create Branch`.
+2. Enter a name for your branch which is a new/separate version of the main repository. Ideally, the name is short and describe the main functionality of your branch
 
-## What is Git?
+<center>
+<img src="codespace_2.gif" alt="" width="500" height="600">
+</center>
 
-Git is a **distributed version control system** that allows you to track changes in your code or documents over time. It enables multiple people to work on a project simultaneously without overwriting each other's changes. With Git, you can:
+## Making Changes In a Branch
+Now that you are in a branch, you can make changes to your copy of the repository without changing anything in the main repository.
+1. On the left hand navigation panel, click on the papers icon ( the top one) to go back to the repository folders.
+2. For the purpose of this exercise, go under `2025` folder and create a `.txt` file there
+3. Name the text file with your name and write down a hobby in the file.
 
-- **Save snapshots** of your work
-- **Collaborate** with peers
-- **Undo mistakes** easily
+<center>
+<img src="codespace_3.gif" alt="" width="500" height="600">
+</center>
 
----
+## Commiting Changes
+1. Go back to the source control panel.
+2. Enter the message in the textbox describing the changes made, e.g. `added my_name.txt`
+3. Click on `Commit`
+4. Choose `Yes` when prompted about staging all the changes.
+5. Click on `Publish Branch`
+6. If there's a notification to run `git fetch` periodically, choose `Yes`.
 
-## Getting Started
+"Git commit" is a command that essentially takes a snapshot of the currently staged changes in your project, saving them as a permanent part of your repository history, effectively acting like a "save point" where you can track changes made to your code over time; it records who made the changes, when they were made, and includes a descriptive message about what was modified. 
 
-### 1. Install Git
+In Git, "publishing a branch" means to send a local branch you created on your computer to a remote repository like GitHub, making it accessible to other team members so they can see, collaborate on, and review your work; essentially, it's the act of sharing your branch with others on the project. 
 
-Before you can use Git, you need to install it on your computer. Download Git from the [official website](https://git-scm.com/downloads) and follow the installation instructions for your operating system.
+<center>
+<img src="codespace_4.gif" alt="" width="500" height="600">
+</center>
 
-### 2. Configure Git
+## Doing a Pull Request
+1. Click on the pull request icon, the one below Github icon
+2. Choose the correct base, in this case `beertino/main` and the branch to merge, in this case should be sth of the form `<your_github_name>/<your_branch_name>`
+3. Add some textual description in the box
+4. Click `Create`
+5. Now, you wait until the request is approved or rejected.
 
-After installing Git, set up your name and email. Open your terminal or command prompt and run:
+A pull request is a proposal to merge a set of changes from one branch into another. In a pull request, collaborators can review and discuss the proposed set of changes before they integrate the changes into the main codebase.
 
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-```
+<center>
+<img src="codespace_4.gif" alt="" width="500" height="600">
+</center>
 
----
-
-## Basic Git Commands
-Let's dive into some of the core commands you'll use when working with Git.
-
-### git init
-Initializes a new Git repository in your project directory.
-
-```bash
-git init
-```
-
-### git clone
-Creates a local copy of an existing repository from GitHub (or another remote).
-
-```bash
-git clone https://github.com/username/repository.git
-```
-
-### git add
-Adds your changes to the staging area. Use this command to tell Git which changes you want to include in your next commit.
-
-```bash
-git add .
-```
-Tip: Replace . with a specific filename to add just one file (e.g., git add filename).
-
-### git commit
-Commits your staged changes to the repository with a descriptive message.
-
-```bash
-git commit -m "Your commit message"
-```
-
-### git push
-Uploads your committed changes to a remote repository (e.g., GitHub).
-
-```bash
-git push origin main
-```
-
-Note: Replace main with your branch name if you’re working on a different branch.
-
-### git pull
-Fetches and merges changes from the remote repository into your current branch.
-
-```bash
-git pull origin main
-```
-
-### git checkout
-Switches between branches or restores files to a previous state. Branches are kind of blocks in a repository where we write new features, fix bugs etc. For example, if three developers are working on a project, they can create their own branches and work on them as the branches are isolated, so everyone can work in their branch.
-
-To switch to an **existing** branch:
-
-```bash
-git checkout branch-name
-```
-To create a **new branch and switch** to it:
-
-```bash
-git checkout -b new-branch
-```
-
-### 
-
-## Example Workflow
-Here's a simple example to show how these commands work together:
-
-### 1. Clone this Repository
-```bash
-git clone https://github.com/beertino/NJCCZ
-```
-
-### 2. Create a New Branch called `my-feature`
-```bash
-git checkout -b my-feature
-```
-
-### 3. Make Changes
-Edit files in your favorite text editor or IDE.
-
-### 4. Stage Your Changes
-```bash
-git add .
-```
-
-### 5. Commit Your Changes
-```bash
-git commit -m "Add new feature"
-```
-
-### 6A. Realised Your Branch is Garbo Tier and Wants to Delete it
-Switch to another branch (e.g. `main`) before deleting a branch, as Git does not allow you to delete the branch you are currently on.
-
-```bash
-git checkout main
-git branch -D garbo_branch
-```
-
-### 6B. Push Your Branch to GitHub / Merge
-```bash
-git push origin my-feature
-```
-
-or 
-
-```bash
-git checkout main
-git merge my-feature
-git push
-```
-
-### 7. Create a Pull Request on GitHub
-
-Go to GitHub and open a pull request to merge your changes into the main branch.
-
----
-
-## Troubleshooting
-### Merge Conflicts:
-If you encounter conflicts when pulling changes, Git will mark the conflicting parts in your files. Open the files, resolve the conflicts, stage the changes with git add, and then commit.
-
-### Detached HEAD:
-If you check out a commit instead of a branch, you might see a "detached HEAD" message. To fix this, create a new branch:
-
-```bash
-git checkout -b new-branch
-```
 
 ## Additional Resources
 - [Git Official Documentation](https://git-scm.com/doc)
 - [GitHub Guides](https://guides.github.com/)
 - [Learn Git Branching](https://learngitbranching.js.org/)
 
-Happy coding and enjoy learning Git!
+Happy coding and enjoy using Codespaces and Git!
