@@ -1,0 +1,20 @@
+#Exercise 2.2
+#In mathematics, an arithmetic sequence is a sequence of real numbers
+#u1,u2,⋯,un 
+#such that the difference between two consecutive terms is constant, i.e.  un+1−un=d  for some constant  d∈R , called the common difference and  n≥1 .
+
+#For example, the sequence  2,5,8,11,14,…  is an arithmetic sequence with first term  2  and common difference  3 .
+
+#Write a program to generate the first  n  terms of an arithmetic sequence with a user defined first term  a  and common difference  d .
+
+#The problem:
+#Request a numeric input from the user to be used as the first term. Let us denote this input as first_term.
+#Request a numeric input from the user to be used as the common difference. Let us denote this input as common_difference.
+#Request an integer input from the user for the number of terms. Let us denote this input as number_of_terms.
+#Print out the sequence up to the  n th term.
+
+first_term = float(input("please key in the first term in the arithmetric sequence:"))
+common_difference = float(input("please key in the common difference:"))
+number_of_terms = int(input("please key in the number of terms in the arithmetric sequence:"))
+for i in range(number_of_terms):
+    print(first_term + i * common_difference)
